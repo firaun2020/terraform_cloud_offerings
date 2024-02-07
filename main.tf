@@ -28,20 +28,10 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "rg-1" {
-    name = "CloudTest"
+    count = 5
+    name = "rg-${count.index}"
     location = "West Europe"
+    
   
 }
 
-variable "ARM_SECRET" {
- 
-}
-variable "ARM_SUBSCRIPTION_ID" {
-  
-}
-variable "ARM_CLIENT_ID" {
-  
-}
-variable "ARM_TENANT_ID" {
-  
-}
