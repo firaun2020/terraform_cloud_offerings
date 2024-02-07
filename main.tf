@@ -20,6 +20,7 @@ provider "azurerm" {
     client_id = var.ARM_CLIENT_ID
     client_secret = var.ARM_SECRET
     tenant_id = var.ARM_TENANT_ID
+    skip_provider_registration = true
     features {
       
     }
