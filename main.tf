@@ -1,4 +1,9 @@
 terraform {
+  cloud {
+    workspaces {
+      
+    }
+  }  
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
@@ -11,4 +16,11 @@ provider "azurerm" {
     features {
       
     }
+}
+
+
+resource "azurerm_resource_group" "rg-1" {
+    name = "CloudTest"
+    location = "West Europe"
+  
 }
