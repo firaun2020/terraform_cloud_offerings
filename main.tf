@@ -1,6 +1,9 @@
 terraform {
   cloud {
+    organization = "firaun2020"
+    token = var.ARM_SECRET
     workspaces {
+      name = "terraform_cloud_offerings"
       
     }
   }  
@@ -22,5 +25,9 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg-1" {
     name = "CloudTest"
     location = "West Europe"
+  
+}
+
+variable "ARM_SECRET" {
   
 }
