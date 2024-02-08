@@ -14,9 +14,9 @@ variable "ARM_TENANT_ID" {
 variable "mapset" {
     type = map(string)
     default = {
-        "Ik" : "Wil win"
-        "NS" : "Will lose"
-        "BB" : "Will lose"
+        "Ik" : "Wil-win",
+        "NS" : "Will-lose",
+        "BB" : "Will-lose"
     }
   
 }
