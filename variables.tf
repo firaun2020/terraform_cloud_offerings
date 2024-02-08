@@ -10,3 +10,13 @@ variable "ARM_CLIENT_ID" {
 variable "ARM_TENANT_ID" {
   
 }
+
+variable "mapset" {
+    type = map(string, string)
+    default = {
+        "Ik" : "Wil win"
+        "NS" : "Will lose"
+        "BB" : "Will lose"
+    }
+  
+}

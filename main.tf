@@ -44,7 +44,7 @@ resource "azurerm_resource_group" "second-tier" {
 
 
 resource "azurerm_resource_group" "foreach" {
-  for_each = azurerm_resource_group.rg-1
-  name = "hello-${each.key}"
+  for_each = var.mapset
+  name = "${each.key}-${each.value}"
   location = "West Europe"
 }
