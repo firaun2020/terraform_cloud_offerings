@@ -42,3 +42,9 @@ resource "azurerm_resource_group" "second-tier" {
   
 }
 
+
+resource "azurerm_resource_group" "foreach" {
+  for_each = azurerm_resource_group.rg-1
+  name = "hello-${each.key}"
+  location = "West Europe"
+}
