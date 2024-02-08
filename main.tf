@@ -27,24 +27,24 @@ provider "azurerm" {
 }
 
 
-resource "azurerm_resource_group" "rg-1" {
-    count = 5
-    name = "rg-${count.index}"
-    location = "West Europe"
+# resource "azurerm_resource_group" "rg-1" {
+#     count = 5
+#     name = "rg-${count.index}"
+#     location = "West Europe"
     
   
-}
+# }
 
-resource "azurerm_resource_group" "second-tier" {
-    count = length(azurerm_resource_group.rg-1)
-    name = "${azurerm_resource_group.rg-1[count.index].name}-${count.index}"
-    location = azurerm_resource_group.rg-1[count.index].location
+# resource "azurerm_resource_group" "second-tier" {
+#     count = length(azurerm_resource_group.rg-1)
+#     name = "${azurerm_resource_group.rg-1[count.index].name}-${count.index}"
+#     location = azurerm_resource_group.rg-1[count.index].location
   
-}
+# }
 
 
-resource "azurerm_resource_group" "foreach" {
-  for_each = var.mapset
-  name = "${each.key}-${each.value}"
-  location = "West Europe"
-}
+# resource "azurerm_resource_group" "foreach" {
+#   for_each = var.mapset
+#   name = "${each.key}-${each.value}"
+#   location = "West Europe"
+# }
