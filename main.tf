@@ -35,7 +35,7 @@ resource "azurerm_resource_group" "rg-1" {
   
 }
 
-resource "azurerm_resource_group" "2nd-tier" {
+resource "azurerm_resource_group" "second-tier" {
     count = length(azurerm_resource_group.rg-1.id)
     name = "${azurerm_resource_group.rg-1}-${count.index}"
     location = azurerm_resource_group.rg-1.location[count.index]
