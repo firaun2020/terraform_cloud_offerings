@@ -27,6 +27,7 @@ provider "azurerm" {
 }
 
 provider "azurerm" {
+  alias = "radio"
     subscription_id = var.ARM_SUBSCRIPTION_ID
     client_id = var.ARM_CLIENT_ID
     client_secret = var.ARM_SECRET
